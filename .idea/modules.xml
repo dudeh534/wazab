@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WAZAP.iml" filepath="$PROJECT_DIR$/WAZAP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wazab.iml" filepath="$PROJECT_DIR$/wazab.iml" />
     </modules>
   </component>
 </project>

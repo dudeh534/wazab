@@ -1,20 +1,27 @@
 package com.ourincheon.wazap;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
+/*
+* TODO - TABLayout RecyclerView insert
+* TODO - ListView Subpage*/
+public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener {
     private BackPressCloseHandler backPressCloseHandler;
 
     @Override
@@ -23,43 +30,50 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(this, Splash.class);
         startActivity(intent);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF2E8B57));
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
 
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(layoutManager);
-        List<Recycler_item> items = new ArrayList<>();
-        Recycler_item[] item = new Recycler_item[5];
-        item[0] = new Recycler_item("공개 소프트 웨어 공모대전", "채영도", "개발자");
-        item[1] = new Recycler_item("대학생 마케팅 아이디어 공모전", "채영도", "개발자");
-        item[2] = new Recycler_item("스타트업뱅크 리포트 오디션", "채영도", "개발자");
-        item[3] = new Recycler_item("스타트업뱅크 리포트 오디션", "채영도", "개발자");
-        item[4] = new Recycler_item("스타트업뱅크 리포트 오디션", "채영도", "개발자");
-
-        for (int i = 0; i < 5; i++) items.add(item[i]);
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
-                Intent Iteminfo = new Intent(MainActivity.this, ItemInfoActivity.class);
-                Iteminfo.putExtra("position", position);
-                startActivity(Iteminfo);
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
+        });
 
-            @Override
-            public void onItemLongClick(View view, int position) {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new FragmentPage(), "모집글(메인)");
+        adapter.addFragment(new FragmentPage(), "주간차트");
+        viewPager.setAdapter(adapter);
 
-            }
-        }));
-        recyclerView.setAdapter(new RecyclerAdapter(getApplicationContext(), items, R.layout.activity_main));
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabTextColors(Color.GRAY, Color.BLACK);
+        tabLayout.setSelectedTabIndicatorColor(Color.GRAY);
 
+
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
         backPressCloseHandler = new BackPressCloseHandler(this);
     }
 
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+
+        }
         backPressCloseHandler.onBackPressed();
     }
 
@@ -83,5 +97,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.home) {
+            // Handle the camera action
+        } else if (id == R.id.alarm) {
+
+        } else if (id == R.id.cart) {
+
+        } else if (id == R.id.require) {
+            Intent intent = new Intent(this, RequireList.class);
+            startActivity(intent);
+
+        } else if (id == R.id.gonggu) {
+
+        } else if (id == R.id.setting) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

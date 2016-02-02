@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="197dp"
+    android:layout_width="match_parent"
+    android:padding="13dp"
+    android:background="@drawable/back">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="13dp">
+
+        <ImageView
+            android:layout_marginTop="48dp"
+            android:id="@+id/imageView"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/icon_user" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="채영도"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/profile_button"
+        android:text="프로필 보기"
+        android:textColor="#ffffff"
+        android:textSize="10dp"
+        android:gravity="center"/>
+
+</RelativeLayout>
