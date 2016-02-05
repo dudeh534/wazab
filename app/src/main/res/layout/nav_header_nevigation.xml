@@ -14,16 +14,16 @@
         android:padding="13dp">
 
         <ImageView
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/imageView"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/icon_user" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="채영도"
+            android:id="@+id/nickname"
             android:gravity="center"
             android:textColor="#ffffff"
             android:textSize="17dp"/>
@@ -35,15 +35,17 @@
             android:textColor="#ffffff"
             android:textSize="12dp"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="64dp"
         android:layout_height="18dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/profile_button"
-        android:text="프로필 보기"
+        android:text="프로필 편집"
         android:textColor="#ffffff"
         android:textSize="10dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:id="@+id/showProBtn"/>
 
 </RelativeLayout>
