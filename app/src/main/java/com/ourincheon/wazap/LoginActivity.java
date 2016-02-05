@@ -9,9 +9,12 @@ import com.kakao.auth.Session;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
+/**
+ * Created by Hsue.
+ */
 
 public class LoginActivity extends Activity {
-    private SessionCallback callback;      //콜백 선언
+    private SessionCallback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,7 @@ public class LoginActivity extends Activity {
         Intent intent = new Intent(this, Splash.class);
         startActivity(intent);
 
-        callback = new SessionCallback();                  // 이 두개의 함수 중요함
+        callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
         Session.getCurrentSession().checkAndImplicitOpen();
 

@@ -9,13 +9,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ourincheon.wazap.MypageActivity">
 
-    <EditText
-        android:drawableLeft="@drawable/star"
+    <TextView
         android:layout_width="180dp"
+        android:paddingLeft="25dp"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="이름"
-        android:id="@+id/eName"
+        android:id="@+id/sName"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="45dp"
         android:layout_alignParentTop="true"
@@ -23,103 +23,112 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="30dp" />
 
-    <EditText
-        android:drawableLeft="@drawable/star"
+    <TextView
         android:layout_width="180dp"
+        android:paddingLeft="25dp"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="전공 및 희망역할"
-        android:id="@+id/eMajor"
-        android:layout_below="@+id/eName"
-        android:layout_alignLeft="@+id/eName"
-        android:layout_alignStart="@+id/eName" />
+        android:id="@+id/sMajor"
+        android:layout_below="@+id/sName"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/sName"
+        android:layout_alignStart="@+id/sName" />
 
-    <EditText
+    <TextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="학교"
-        android:id="@+id/eUniv"
+        android:id="@+id/sUniv"
         android:paddingLeft="25dp"
-        android:layout_below="@+id/eMajor"
-        android:layout_alignLeft="@+id/eMajor"
-        android:layout_alignStart="@+id/eMajor" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sMajor"
+        android:layout_alignLeft="@+id/sMajor"
+        android:layout_alignStart="@+id/sMajor" />
 
-    <EditText
-        android:drawableLeft="@drawable/star"
+    <TextView
+
+        android:paddingLeft="25dp"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="지역"
-        android:id="@+id/eLoc"
-        android:layout_below="@+id/eUniv"
-        android:layout_alignLeft="@+id/eUniv"
-        android:layout_alignStart="@+id/eUniv" />
+        android:layout_marginTop="10dp"
+        android:id="@+id/sLoc"
+        android:layout_below="@+id/sUniv"
+        android:layout_alignLeft="@+id/sUniv"
+        android:layout_alignStart="@+id/sUniv" />
 
-    <EditText
-        android:drawableLeft="@drawable/star"
+    <TextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="카카오 아이디"
-        android:id="@+id/eKakao"
-        android:layout_below="@+id/eLoc"
-        android:layout_alignLeft="@+id/eLoc"
-        android:layout_alignStart="@+id/eLoc" />
+        android:id="@+id/sKakao"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sLoc"
+        android:layout_alignLeft="@+id/sLoc"
+        android:layout_alignStart="@+id/sLoc" />
 
     <ImageView
-        android:id="@+id/ePro"
+        android:id="@+id/sPro"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/icon_user"
-        android:layout_below="@+id/eName"
-        android:layout_alignRight="@+id/eIntro"
-        android:layout_alignEnd="@+id/eIntro" />
+        android:layout_below="@+id/sName"
+        android:layout_alignRight="@+id/sIntro"
+        android:layout_alignEnd="@+id/sIntro" />
 
     <TextView
-        android:drawableLeft="@drawable/star"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:text="200자 소개"
-        android:layout_below="@+id/eKakao"
-        android:layout_alignLeft="@+id/eKakao"
-        android:layout_alignStart="@+id/eKakao"
+        android:layout_below="@+id/sKakao"
+        android:layout_alignLeft="@+id/sKakao"
+        android:layout_alignStart="@+id/sKakao"
+        android:paddingLeft="25dp"
         android:layout_marginTop="30dp"
         android:id="@+id/textView8" />
 
-    <EditText
+    <TextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:gravity="top"
         android:singleLine="false"
         android:lines="3"
         android:textSize="18dp"
-        android:id="@+id/eIntro"
+        android:layout_marginTop="10dp"
+        android:id="@+id/sIntro"
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:paddingLeft="25dp"
-        android:layout_width="180dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:text="기타경험/수상내역"
         android:id="@+id/textView9"
-        android:layout_above="@+id/eExp"
-        android:layout_alignLeft="@+id/eExp"
-        android:layout_alignStart="@+id/eExp" />
+        android:layout_below="@+id/sIntro"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="36dp" />
 
-    <EditText
+    <TextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:gravity="top"
         android:singleLine="false"
         android:lines="3"
         android:textSize="18dp"
-        android:id="@+id/eExp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/sExp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/sIntro"
+        android:layout_alignStart="@+id/sIntro" />
 
 
 </RelativeLayout>

@@ -16,9 +16,8 @@ import com.kakao.util.helper.log.Logger;
  * me를 호출하여 가입 여부에 따라 가입 페이지를 그리던지 Main 페이지로 이동 시킨다.
  */
 public class KakaoSignupActivity extends Activity {
-    private String kakaoID;
-    private String kakaoNickname;
-    private String kakaoThumbnail;
+
+    private infoKaKao kakao;
     /**
      * Main으로 넘길지 가입 페이지를 그릴지 판단하기 위해 me를 호출한다.
      * @param savedInstanceState 기존 session 정보가 저장된 객체
@@ -55,11 +54,12 @@ public class KakaoSignupActivity extends Activity {
             @Override
             public void onSuccess(UserProfile userProfile) {  //성공 시 userProfile 형태로 반환
                 Logger.d("UserProfile : " + userProfile);
-                kakaoID = String.valueOf(userProfile.getId());
-                kakaoNickname = userProfile.getNickname();
+                String kakaoID = String.valueOf(userProfile.getId());
+                String kakaoNickname = userProfile.getNickname();
 
-                kakaoThumbnail = userProfile.getThumbnailImagePath();
+                String kakaoThumbnail = userProfile.getThumbnailImagePath();
 
+                kakao = new infoKaKao(kakaoNickname,kakaoThumbnail);
                 redirectMainActivity(); // 로그인 성공시 MainActivity로
             }
         });
@@ -67,8 +67,7 @@ public class KakaoSignupActivity extends Activity {
     private void redirectMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         //intent.putExtra("id",kakaoID);
-        intent.putExtra("Nickname",kakaoNickname);
-        intent.putExtra("Thumbnail",kakaoThumbnail);
+        intent.putExtra("KakaoInfo",kakao);
         startActivity(intent);
         finish();
     }

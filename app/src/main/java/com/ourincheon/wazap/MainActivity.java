@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     private BackPressCloseHandler backPressCloseHandler;
 
     ImageView profileImg;
-    String nick,thumbnail;
+    String thumbnail;
+    infoKaKao kakao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, RecruitActivity.class);
-                i.putExtra("Nickname",nick);
+                i.putExtra("KakaoInfo",kakao);
+                //i.putExtra("Nickname",nick);
                 startActivity(i);
                 //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
@@ -81,11 +83,11 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         View header = navigationView.inflateHeaderView(R.layout.nav_header_nevigation);
         TextView nickname = (TextView)header.findViewById(R.id.nickname);
         Intent intent = getIntent();
-        nick = (String)intent.getSerializableExtra("Nickname");
-        nickname.setText(nick);
+        kakao = (infoKaKao)intent.getSerializableExtra("KakaoInfo");
+        nickname.setText(kakao.getName());
 
         profileImg = (ImageView)header.findViewById(R.id.imageView);
-        thumbnail = (String)intent.getSerializableExtra("Thumbnail");
+        thumbnail = kakao.getThumbnail();
         ThumbnailImage thumb = new ThumbnailImage();
         thumb.execute();
 
@@ -94,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onClick(View v) {
                 //  Toast.makeText(getApplicationContext(), "프로필 보기", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(MainActivity.this, MypageActivity.class);
-                i.putExtra("Nickname",nick);
+                Intent i = new Intent(MainActivity.this, showMypageActivity.class);
+                i.putExtra("KakaoInfo",kakao);
                 startActivity(i);
             }
         });
