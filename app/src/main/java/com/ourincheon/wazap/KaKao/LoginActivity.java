@@ -1,4 +1,4 @@
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.KaKao;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
+import com.ourincheon.wazap.KaKao.KakaoSignupActivity;
+import com.ourincheon.wazap.R;
+import com.ourincheon.wazap.Splash;
 
 /**
  * Created by Hsue.

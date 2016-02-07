@@ -123,9 +123,9 @@
         android:text="모집인원"
         android:textSize="18dp"
         android:id="@+id/textView13"
-        android:layout_above="@+id/eNum"
-        android:layout_alignLeft="@+id/reTitle"
-        android:layout_alignStart="@+id/reTitle" />
+        android:layout_below="@+id/cDesign"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
 
     <EditText
         android:layout_width="240dp"
@@ -133,10 +133,10 @@
         android:hint="입력하세요"
         android:textSize="18dp"
         android:id="@+id/eNum"
-        android:layout_above="@+id/textView12"
-        android:layout_alignRight="@+id/cAd"
-        android:layout_alignEnd="@+id/cAd"
-        android:layout_marginBottom="73dp" />
+        android:layout_below="@+id/cDesign"
+        android:layout_alignRight="@+id/reTitle"
+        android:layout_alignEnd="@+id/reTitle" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,19 +144,20 @@
         android:text="소개"
         android:textSize="18dp"
         android:id="@+id/textView14"
-        android:layout_alignBottom="@+id/eNum"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/eNum"
         android:layout_alignLeft="@+id/textView13"
         android:layout_alignStart="@+id/textView13" />
 
     <EditText
-        android:layout_width="240dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:hint="입력하세요"
+        android:lines="2"
         android:textSize="18dp"
         android:id="@+id/erIntro"
-        android:layout_above="@+id/eNum"
-        android:layout_alignLeft="@+id/eNum"
-        android:layout_alignStart="@+id/eNum" />
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"

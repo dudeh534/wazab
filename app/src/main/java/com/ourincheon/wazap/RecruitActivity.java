@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ourincheon.wazap.KaKao.infoKaKao;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;

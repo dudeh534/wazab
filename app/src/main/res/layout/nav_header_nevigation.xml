@@ -26,14 +26,9 @@
             android:id="@+id/nickname"
             android:gravity="center"
             android:textColor="#ffffff"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:textSize="12dp"/>
     </LinearLayout>
 
     <TextView

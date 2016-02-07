@@ -1,4 +1,4 @@
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.KaKao;
 
 import android.app.Activity;
 import android.content.Context;

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.KaKao;
 
 import android.app.Activity;
 import android.app.Application;

@@ -5,13 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".GlobalApplication"
+        android:name=".KaKao.GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".LoginActivity"
+            android:name=".KaKao.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -37,7 +37,7 @@
             android:value="@string/kakao_api" />
 
         <activity
-            android:name=".KakaoSignupActivity"
+            android:name=".KaKao.KakaoSignupActivity"
             android:label="@string/title_activity_kakao_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RecruitActivity" />

@@ -1,4 +1,4 @@
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.KaKao;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.helper.log.Logger;
+import com.ourincheon.wazap.MainActivity;
 
 /**
  * 유효한 세션이 있다는 검증 후
