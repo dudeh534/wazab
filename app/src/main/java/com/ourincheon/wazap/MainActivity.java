@@ -1,12 +1,14 @@
 package com.ourincheon.wazap;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -17,6 +19,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.ourincheon.wazap.KaKao.infoKaKao;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 /*
 * TODO - TABLayout RecyclerView insert
@@ -24,12 +34,15 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener {
     private BackPressCloseHandler backPressCloseHandler;
 
+    ImageView profileImg;
+    String thumbnail;
+    infoKaKao kakao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, Splash.class);
-        startActivity(intent);
+
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,8 +50,12 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(MainActivity.this, RecruitActivity.class);
+                i.putExtra("KakaoInfo",kakao);
+                //i.putExtra("Nickname",nick);
+                startActivity(i);
+                //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
             }
         });
 
@@ -59,10 +76,55 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         tabLayout.setSelectedTabIndicatorColor(Color.GRAY);
 
 
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View header = navigationView.inflateHeaderView(R.layout.nav_header_nevigation);
+        TextView nickname = (TextView)header.findViewById(R.id.nickname);
+        Intent intent = getIntent();
+        kakao = (infoKaKao)intent.getSerializableExtra("KakaoInfo");
+        nickname.setText(kakao.getName());
+
+        profileImg = (ImageView)header.findViewById(R.id.imageView);
+        thumbnail = kakao.getThumbnail();
+        ThumbnailImage thumb = new ThumbnailImage();
+        thumb.execute();
+
+        TextView profileBtn = (TextView)header.findViewById(R.id.showProBtn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  Toast.makeText(getApplicationContext(), "프로필 보기", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this, showMypageActivity.class);
+                i.putExtra("KakaoInfo",kakao);
+                startActivity(i);
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(this);
         backPressCloseHandler = new BackPressCloseHandler(this);
+    }
+
+    public class ThumbnailImage extends AsyncTask<String, Void, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(String... params) {
+            // TODO Auto-generated method stub
+
+            try {
+                URL url = new URL(thumbnail);
+                InputStream is = url.openConnection().getInputStream();
+                Bitmap bitMap = BitmapFactory.decodeStream(is);
+                return bitMap;
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            return null;
+
+        }
+        protected void onPostExecute(Bitmap result) {
+            // TODO Auto-generated method stub
+            super.onPostExecute(result);
+            profileImg.setImageBitmap(result);
+        }
     }
 
     @Override

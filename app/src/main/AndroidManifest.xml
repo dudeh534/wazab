@@ -2,30 +2,50 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ourincheon.wazap" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".KaKao.GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Login"
+            android:name=".KaKao.LoginActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".Splash"/>
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ItemInfoActivity"/>
-        <activity android:name=".RequireList"
-            android:label="신청목록"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Splash" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ItemInfoActivity" />
+        <activity
+            android:name=".RequireList"
+            android:label="신청목록" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_api" />
+
+        <activity
+            android:name=".KaKao.KakaoSignupActivity"
+            android:label="@string/title_activity_kakao_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RecruitActivity" />
+        <activity android:name=".MypageActivity" />
+        <activity
+            android:name=".showMypageActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
