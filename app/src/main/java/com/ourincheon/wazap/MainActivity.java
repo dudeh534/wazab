@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         tabLayout.setSelectedTabIndicatorColor(Color.GRAY);
 
 
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         backPressCloseHandler = new BackPressCloseHandler(this);

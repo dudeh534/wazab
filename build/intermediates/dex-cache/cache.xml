@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-a9a51f29bad26ef5a14d90a35f82af8da0c22b60.jar" />
-    </item>
-    <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-eade18cf894803a429905b1da9c0a4a6a7030e21.jar" />
-    </item>
-    <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-01446e9380fdf9c6f5656198ef0f1676419476cd.jar" />
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\classes-f09a968a84fb38495cb6f047de1db48194d5571c.jar" />
     </item>
     <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-1c87cd271e8d35da355c6d1e318a61bd0316e6eb.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\classes-bf271c47da92a14255d86815fb36441b5ee67c31.jar" />
+    </item>
+    <item
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\classes-4b30f2f6290c05f682748d24e9c3374d3e8c47d4.jar" />
     </item>
     <item
         jar="C:\Users\Youngdo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-047e5ed01d4d2f7e8685bdb1dabb6e21a6f1570f.jar" />
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-047e5ed01d4d2f7e8685bdb1dabb6e21a6f1570f.jar" />
     </item>
     <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-99a3b2e6c274bbb9076fb81c105f1a6f2d1d3d8d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-4dcb51175bcf4e448c29b47f8fae05fa91a0e03a.jar" />
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\classes-68c82e6e20a4f8be2d604c73e30a42fa2ec1e211.jar" />
     </item>
     <item
-        jar="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jar="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-4c146186bb55dd80d9d4422c8ddc93838531ca19.jar" />
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Youngdo\AndroidStudioProjects\WazabProject\app\build\intermediates\pre-dexed\debug\classes-1dc023b37b001333755d61066b19cf0cc08345bd.jar" />
     </item>
 
 </items>
