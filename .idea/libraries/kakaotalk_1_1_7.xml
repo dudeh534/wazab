@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/kakaotalk/1.1.7/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/kakaotalk/1.1.7/8854970d193a2d16570cacbb9e63fc1d0623dd36/kakaotalk-1.1.7-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

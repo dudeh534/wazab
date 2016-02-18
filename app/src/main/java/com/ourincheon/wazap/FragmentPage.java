@@ -81,6 +81,42 @@ public class FragmentPage extends Fragment {
                 linearLayout.addView(content);
                 return linearLayout;
             case 1:
+                Log.e("position", String.valueOf(storage.getInstance().getPosition()));
+                linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_page, container, false);
+                content = (RecyclerView) linearLayout.findViewById(R.id.recyclerView);
+                LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity());
+                content.setHasFixedSize(true);
+                content.setLayoutManager(layoutManager2);
+                List<Recycler_item> items2 = new ArrayList<>();
+                Recycler_item[] item2 = new Recycler_item[5];
+                item2[0] = new Recycler_item("스타트업 브라더 창업지업 프로그램 5차 모집", "마케팅", "2016-01-25 ~ 2016-02-22");
+                item2[1] = new Recycler_item("[해외] 제9회 iPhone 사진공모전", "사진/영상/UCC, 해외", "2016-02-16 ~ 2016-03-31");
+
+                for (int i = 0; i < 2; i++) items2.add(item2[i]);
+                content.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), content, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String link;
+                        if(position==0)
+                            link="http://www.brother-korea.com";
+                        else
+                            link="http://www.ippawards.com/the-competition/";
+
+                        Intent intent = new Intent(getActivity(), WebSiteActivity.class);
+                        intent.putExtra("url", link);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
+
+                    }
+                }));
+                content.setAdapter(new RecyclerAdapter(getActivity(), items2, R.layout.fragment_page));
+                linearLayout.removeAllViews();
+                linearLayout.addView(content);
+                return linearLayout;
+                /*
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
 
                 FrameLayout fl = new FrameLayout(getActivity());
@@ -99,6 +135,7 @@ public class FragmentPage extends Fragment {
 
                 fl.addView(v);
                 return fl;
+                */
             default:
                 return null;
         }

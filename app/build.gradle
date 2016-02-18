@@ -29,4 +29,6 @@ dependencies {
     compile files('libs/universal-image-loader-1.9.4.jar')
     compile group: project.KAKAO_SDK_GROUP, name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
     compile group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
 }
