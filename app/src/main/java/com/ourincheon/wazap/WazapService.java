@@ -5,8 +5,10 @@ import com.ourincheon.wazap.KaKao.infoKaKao;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -26,4 +28,8 @@ public interface WazapService {
     Call<infoKaKao> getToken(
             @Query("nickname") String name,
             @Query("thumnail") String thumnail);
+
+    @POST("/users/reg")
+    Call<regMsg> createInfo(
+            @Body UserInfo userInfo);
 }
