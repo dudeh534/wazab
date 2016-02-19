@@ -2,12 +2,12 @@ package com.ourincheon.wazap;
 
 
 import com.ourincheon.wazap.KaKao.infoKaKao;
+import com.ourincheon.wazap.Retrofit.UserInfo;
+import com.ourincheon.wazap.Retrofit.regMsg;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -29,7 +29,17 @@ public interface WazapService {
             @Query("nickname") String name,
             @Query("thumnail") String thumnail);
 
+
     @POST("/users/reg")
     Call<regMsg> createInfo(
             @Body UserInfo userInfo);
+
+
+    @GET("users/{user_id}")
+    Call<regUser> getUserInfo(
+            @Path("user_id") String user_id
+    );
+
 }
+
+

@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             public void onClick(View v) {
                 //  Toast.makeText(getApplicationContext(), "프로필 보기", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, showMypageActivity.class);
-                i.putExtra("KakaoInfo",kakao);
+               // i.putExtra("KakaoInfo",kakao);
                 startActivity(i);
             }
         });

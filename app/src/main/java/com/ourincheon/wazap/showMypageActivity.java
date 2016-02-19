@@ -1,72 +1,72 @@
 package com.ourincheon.wazap;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.ourincheon.wazap.KaKao.infoKaKao;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Hsue.
  */
 public class showMypageActivity extends AppCompatActivity {
 
-    infoKaKao kakao;
-    String thumbnail;
-    ImageView profileImg;
+    regUser reguser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_mypage);
 
+     //   RetrofitService retroService = new RetrofitService();
+     //   retroService.loadPage();
+        loadPage();
         Intent intent = getIntent();
-        kakao = (infoKaKao)intent.getSerializableExtra("KakaoInfo");
 
-        TextView nickname = (TextView) findViewById(R.id.sName);
-        nickname.setText(kakao.getName());
-
-        profileImg = (ImageView)findViewById(R.id.sPro);
-        thumbnail = kakao.getThumbnail();
-        ThumbnailImage thumb = new ThumbnailImage();
-        thumb.execute();
     }
 
-    /*****분리할방법 고민해보기******/
-    public class ThumbnailImage extends AsyncTask<String, Void, Bitmap> {
-        @Override
-        protected Bitmap doInBackground(String... params) {
-            // TODO Auto-generated method stub
 
-            try {
-                URL url = new URL(thumbnail);
-                InputStream is = url.openConnection().getInputStream();
-                Bitmap bitMap = BitmapFactory.decodeStream(is);
-                return bitMap;
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+    void loadPage()
+    {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://come.n.get.us.to/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        WazapService service = retrofit.create(WazapService.class);
+
+        Call<regUser> call = service.getUserInfo("1");
+        call.enqueue(new Callback<regUser>() {
+            @Override
+            public void onResponse(Call<regUser> call, Response<regUser> response) {
+                if (response.isSuccess() && response.body() != null) {
+
+                    Log.d("SUCCESS", response.message());
+                    reguser = response.body();
+                    //user = response.body();
+                    Log.d("SUCCESS", reguser.getMsg());
+                } else if (response.isSuccess()) {
+                    Log.d("Response Body isNull", response.message());
+                } else {
+                    Log.d("Response Error Body", response.errorBody().toString());
+                }
             }
-            return null;
 
-        }
-        protected void onPostExecute(Bitmap result) {
-            // TODO Auto-generated method stub
-            super.onPostExecute(result);
-            profileImg.setImageBitmap(result);
-        }
+            @Override
+            public void onFailure(Call<regUser> call, Throwable t) {
+                t.printStackTrace();
+                Log.e("Errorglg''';kl", t.getMessage());
+            }
+        });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

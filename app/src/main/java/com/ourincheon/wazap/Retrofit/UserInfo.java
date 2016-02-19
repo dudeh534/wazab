@@ -1,26 +1,37 @@
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.Retrofit;
+
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by hsue
  */
 public class UserInfo {
+
+    @SerializedName("access_token")
     String access_token;
+    @SerializedName("kakao_id")
     String kakao_id;
+    @SerializedName("username")
     String username;
-    String password;
+    @SerializedName("shcool")
     String school;
+    @SerializedName("age")
     int age;
+    @SerializedName("major")
     String major;
+    @SerializedName("locate")
     String locate;
+    @SerializedName("introduce")
     String introduce;
+    @SerializedName("exp")
     String exp;
 
-    public UserInfo(String access_token, String kakao_id, String username, String password, String school, int age, String major,String locate, String introduce, String exp)
+    public UserInfo(){};
+    public UserInfo(String access_token, String kakao_id, String username, String school, int age, String major,String locate, String introduce, String exp)
     {
         this.access_token = access_token;
         this.kakao_id = kakao_id;
         this.username = username;
-        this.password = password;
         this.school = school;
         this.age = age;
         this.major = major;
@@ -39,10 +50,6 @@ public class UserInfo {
 
     public String getUsername() {
         return username;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public String getSchool() {

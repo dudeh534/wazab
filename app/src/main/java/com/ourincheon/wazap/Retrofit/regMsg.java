@@ -1,13 +1,13 @@
-package com.ourincheon.wazap;
+package com.ourincheon.wazap.Retrofit;
 
 /**
  * Created by sue
         */
 public class regMsg {
-    private boolean result;
+    private String result;
     private String msg;
 
-    public boolean isResult() {
+    public String isResult() {
         return result;
     }
 
