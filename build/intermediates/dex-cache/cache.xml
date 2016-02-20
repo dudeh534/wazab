@@ -2,102 +2,102 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-01c0af7a2b0383fa1b35c48d03c65f3630064c3e.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.7\jars\classes.jar"
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.7\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="cd274d51f5c8edd33f90cd59439813f1b8e0da6a">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-83dfcd3117b43406215920df1baa0571caea4e8b.jar" />
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-27511425d227c858ba5dafeb4726a68036710363.jar" />
     </item>
     <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-7d42a91a6ac60e18e5d13eac210403511876722e.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-e6656aad44a6485788c029e31d49b0d2b18ead4b.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.8\ec0f15c77ddd390e5ac514ac72ebbb9f2e0e31e2\library-1.0.8.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ec0f15c77ddd390e5ac514ac72ebbb9f2e0e31e2">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\library-1.0.8-012a4bbd630855e85f4200f08470f1842360d78a.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="718b18113a82af949ac7ccb280663dcedaf7838a">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-b95ad72f76158d9b23b05bf49fcd7e158d06963b.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-1580b21b233107ee506fc439aac12ff34fffb435.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-28fd0172fdabb24599fbc3d9ce7e75e0aaba596e.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-b97f5726bd3cb3cdfc58719933319974a9406269.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="35708bf7ef298d7d79c22fe0e6d7dce4a5d8805f">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-d719ddcadb000134c4e2e5e3720917111540987a.jar" />
-    </item>
-    <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.7\jars\classes.jar"
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.7\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="83d318091bcf5a6599895cfd210c09ec5d5e99f7">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-3e19a1f910272b9f7073729db00601f3e5bdc147.jar" />
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-6791c9fd2944bb9418f278c091ef9af56760a520.jar" />
     </item>
     <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.7\jars\classes.jar"
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="f05003d1c70f11e61a06c996621f2904f157be7f">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-6e4386bc8d7621df09400b9726f07267ec24ccdb.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-8215fd195576991daf4f6d669ba8350960f99abe.jar" />
     </item>
     <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.7\jars\classes.jar"
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="db5778b91fccdd64b42bf28eaf7bf3c2c6cad256">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\classes-d16e2e7a0378b725d16cae26676b809d78e3713f.jar" />
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-7109d33b494f16ff3c749bbeb248fd62a8e2bff0.jar" />
     </item>
     <item
-        jar="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="718b18113a82af949ac7ccb280663dcedaf7838a">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-bbd62ba21ace6c25d34e22bbbb69698af121cdb0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Youngdo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-047e5ed01d4d2f7e8685bdb1dabb6e21a6f1570f.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\sue\AndroidStudioProjects\wazab\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-4e59a1cada6307fbdaf2261fead6de9a72ead51f.jar" />
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-f8d0afd7d261dc56318c21fc86de804dc169a8ff.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="35708bf7ef298d7d79c22fe0e6d7dce4a5d8805f">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-7f56314cd42e67461089e6361fce6628fc4911b7.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-fc518e055f9b9633b2595dfe25d9cf8e755116ec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Youngdo\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.8\ec0f15c77ddd390e5ac514ac72ebbb9f2e0e31e2\library-1.0.8.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec0f15c77ddd390e5ac514ac72ebbb9f2e0e31e2">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\library-1.0.8-870fb4fc3c86a5f380578b7f07555a513791b4ab.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-c9f23b98d5e24f20464f08ee5c2d0f58a362a64d.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f05003d1c70f11e61a06c996621f2904f157be7f">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-674e6cc2a9bb4078a5b2c273fe1d67291290b5d0.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="db5778b91fccdd64b42bf28eaf7bf3c2c6cad256">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-5db3de96e1e3c7f7c50d32d63832ddc31628443e.jar" />
+    </item>
+    <item
+        jar="D:\android-project\wazab\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\android-project\wazab\app\build\intermediates\pre-dexed\debug\classes-3900554782ed5bb215e990240279c6296886a1e6.jar" />
     </item>
 
 </items>
