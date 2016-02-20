@@ -2,6 +2,7 @@ package com.ourincheon.wazap;
 
 
 import com.ourincheon.wazap.KaKao.infoKaKao;
+import com.ourincheon.wazap.Retrofit.ContestInfo;
 import com.ourincheon.wazap.Retrofit.UserInfo;
 import com.ourincheon.wazap.Retrofit.regMsg;
 
@@ -30,16 +31,23 @@ public interface WazapService {
             @Query("thumnail") String thumnail);
 
 
+    // 사용자 정보 저장하기
     @POST("/users/reg")
     Call<regMsg> createInfo(
             @Body UserInfo userInfo);
 
 
+    // 사용자 정보 받아오기
     @GET("users/{user_id}")
     Call<regUser> getUserInfo(
             @Path("user_id") String user_id
     );
 
+    // 모집글 쓰기
+    @POST("contests")
+    Call<regMsg> createContests(
+            @Body ContestInfo contestInfo
+    );
 }
 
 

@@ -11,5 +11,6 @@
     <string name="title_activity_kakao_signup">KakaoSignupActivity</string>
     <string name="title_activity_show_mypage">showMypageActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="facebook_app_id">1727300620824623</string>
 
 </resources>

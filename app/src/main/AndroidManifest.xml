@@ -4,14 +4,17 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
-        android:name=".KaKao.GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <!-- 페이스북 meta data -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
         <activity
-            android:name=".KaKao.LoginActivity"
+            android:name=".facebook.FacebookLogin"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 페이스북 activity -->
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
         <activity
             android:name=".SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -45,10 +56,7 @@
         <activity
             android:name=".showMypageActivity"
             android:label="@string/app_name"></activity>
-        <activity
-            android:name=".KaKao.TestActivity"
-            android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".WebSiteActivity"></activity>
     </application>
 

@@ -7,8 +7,8 @@ import com.ourincheon.wazap.regUser;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.GsonConverterFactory;
 import retrofit2.Response;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by hsue on 16. 2. 19.
@@ -30,7 +30,7 @@ public class RetrofitService {
         Call<regUser> call = service.getUserInfo("1");
         call.enqueue(new Callback<regUser>() {
             @Override
-            public void onResponse(Call<regUser> call, Response<regUser> response) {
+            public void onResponse( Response<regUser> response) {
                 if (response.isSuccess() && response.body() != null) {
 
                     Log.d("SUCCESS", response.message());
@@ -45,7 +45,7 @@ public class RetrofitService {
             }
 
             @Override
-            public void onFailure(Call<regUser> call, Throwable t) {
+            public void onFailure( Throwable t) {
                 t.printStackTrace();
                 Log.e("Errorglg''';kl", t.getMessage());
             }

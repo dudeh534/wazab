@@ -1,6 +1,7 @@
 package com.ourincheon.wazap;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
 
     ImageView profileImg;
     String thumbnail;
-    infoKaKao kakao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, RecruitActivity.class);
-                i.putExtra("KakaoInfo",kakao);
+                //i.putExtra("KakaoInfo",kakao);
                 //i.putExtra("Nickname",nick);
                 startActivity(i);
                 //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -79,12 +79,15 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View header = navigationView.inflateHeaderView(R.layout.nav_header_nevigation);
         TextView nickname = (TextView)header.findViewById(R.id.nickname);
-        Intent intent = getIntent();
-        kakao = (infoKaKao)intent.getSerializableExtra("KakaoInfo");
-        nickname.setText(kakao.getName());
+
+        // 사용자 이름, 이미지 불러오기
+        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+      //  Intent intent = getIntent();
+       // kakao = (infoKaKao)intent.getSerializableExtra("KakaoInfo");
+       nickname.setText(pref.getString("name",""));
 
         profileImg = (ImageView)header.findViewById(R.id.imageView);
-        thumbnail = kakao.getThumbnail();
+       thumbnail = pref.getString("profile_img","");
         ThumbnailImage thumb = new ThumbnailImage();
         thumb.execute();
 
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 startActivity(i);
             }
         });
+
 
         navigationView.setNavigationItemSelectedListener(this);
         backPressCloseHandler = new BackPressCloseHandler(this);

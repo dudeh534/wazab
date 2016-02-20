@@ -1,6 +1,7 @@
 package com.ourincheon.wazap;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -21,7 +22,6 @@ import java.net.URL;
 
 public class RecruitActivity extends AppCompatActivity {
 
-    infoKaKao kakao;
     String thumbnail;
     ImageView profileImg;
 
@@ -31,15 +31,15 @@ public class RecruitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recruit);
 
         TextView nickname = (TextView) findViewById(R.id.leaderTxt);
-        Intent intent = getIntent();
-        kakao = (infoKaKao) intent.getSerializableExtra("KakaoInfo");
-        nickname.setText(kakao.getName());
+/*
+        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+        nickname.setText(pref.getString("name",""));
 
-
-        profileImg = (ImageView) findViewById(R.id.Pro);
-        thumbnail = kakao.getThumbnail();
+        profileImg = (ImageView)findViewById(R.id.imageView);
+        thumbnail = pref.getString("profile_img","");
         ThumbnailImage thumb = new ThumbnailImage();
         thumb.execute();
+        */
     }
 
     /**

@@ -1,5 +1,7 @@
 package com.ourincheon.wazap;
 
+import org.json.JSONObject;
+
 /**
  * Created by hsue on 16. 2. 19.
  */
@@ -7,7 +9,7 @@ public class regUser
 {
     boolean result;
     String msg;
-   // JSONData data;
+    JSONObject data;
 
     public boolean isResult() {
         return result;
@@ -17,11 +19,11 @@ public class regUser
         return msg;
     }
 
-   /* public JSONData getData()
+    public JSONObject getData()
     {
         return data;
     }
-*/
+
 }
 
 class JSONData{

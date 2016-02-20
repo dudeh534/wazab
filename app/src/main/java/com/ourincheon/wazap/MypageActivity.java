@@ -12,9 +12,9 @@ import com.ourincheon.wazap.Retrofit.regMsg;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.GsonConverterFactory;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Hsue.
@@ -90,7 +90,7 @@ public class MypageActivity extends AppCompatActivity {
         Call<regMsg> call = service.createInfo(userInfo);
         call.enqueue(new Callback<regMsg>() {
             @Override
-            public void onResponse(Call<regMsg> call, Response<regMsg> response) {
+            public void onResponse( Response<regMsg> response) {
                 if (response.isSuccess() && response.body() != null) {
 
                     res = response.body();
@@ -105,7 +105,7 @@ public class MypageActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<regMsg> call, Throwable t) {
+            public void onFailure( Throwable t) {
                 t.printStackTrace();
                 Log.e("Error", t.getMessage());
             }
